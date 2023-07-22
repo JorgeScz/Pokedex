@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'examenangular';
+  isDrawerOpened = false;
+  toggleDrawer() {
+    this.isDrawerOpened = !this.isDrawerOpened;
+  }
 }

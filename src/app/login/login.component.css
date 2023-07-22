@@ -1,0 +1,97 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  width: 30%;
+  margin-top: 5%;
+  background-color: aliceblue;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Agregamos una sombra al contenedor */
+  border-radius: 10px; /* Añadimos bordes redondeados al contenedor */
+}
+
+.selection-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.selection-buttons .toggle-btn {
+  margin: 0 10px;
+  padding: 5px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease; /* Agregamos una transición al cambiar el color de fondo */
+}
+
+.selection-buttons .toggle-btn.active {
+  background-color: #fdd10e;;
+  color: #fff;
+}
+
+/* Estilos para los formularios */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button.btn {
+  width: 100%;
+  margin-top: 10px;
+  background-color: #fdd10e;;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.btn.disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
+h2{
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
+
+.ne{
+  color: black;
+  font-weight: bold;
+}
+.fon{
+  background-color: #db0c2c  ;
+}

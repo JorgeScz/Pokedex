@@ -1,0 +1,8 @@
+<ng-container *ngIf="poke">
+    <h2>{{poke.name}}</h2>
+    <img [ngSrc]="poke.img" width="100" height="100">
+    <p>Type: {{poke.type}}</p>
+    <p>Move:  {{poke.movimiento}}</p>
+    <p>Description: {{poke.texto}}</p>
+</ng-container>
+<ng-container  *ngIf="!poke"></ng-container> 

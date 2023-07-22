@@ -1,0 +1,130 @@
+.table-container {
+  display: flex;
+  justify-content: center;
+  margin-top:45px;
+}
+
+.custom-table {
+  width: 80%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border: 2px solid #00a8e8;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-table th,
+.custom-table td {
+  border: 1px solid #dddddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.custom-table th {
+  background-color: #00a8e8;
+  color: #050505;
+  text-align: center;
+}
+
+th,
+tr {
+  text-align: center;
+}
+
+td {
+  font-size: 20px;
+}
+
+.custom-table img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid #0380f4;
+  background-color: #0397f9;
+  color: #000000;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Estilo para los elementos del menú */
+
+.custom-table img {
+  display: block;
+  margin: auto;
+  max-width: 50px; /* Reducir el ancho de la imagen a 50px */
+  max-height: 50px; /* Reducir la altura de la imagen a 50px */
+  border-radius: 50%; /* Hacer un borde redondo del 50% del tamaño */
+}
+.icono{
+  display: block;
+  margin: auto;
+  max-width: 60px; /* Reducir el ancho de la imagen a 50px */
+  max-height: 60px; /* Reducir la altura de la imagen a 50px */
+  border-radius: 60%; /* Hacer un borde redondo del 50% del tamaño */
+}
+#menu {
+  height: 100vh; /* Ajusta la altura según tus necesidades */
+  overflow-y: auto; /* Agrega un scrollbar vertical si el contenido es más largo que la altura del menú */
+}
+.pagination button:hover {
+  background-color: #0397f973;
+  color: #000000;
+  font-size: 22px;
+  border-color: #333333;
+}
+/* Estilo para el botón del menú */
+.mat-icon-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+}
+
+/* Estilo para el menú vertical */
+.mat-sidenav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 120px; /* Ancho del menú */
+  background-color: #f91010a8; /* Color de fondo del menú */
+  color: #ffffff; /* Color del texto del menú */
+  z-index: 998;
+  transition: width 0.3s ease;
+}
+.menu-button-container {
+  position: fixed;
+  top: 0px;
+  left: 5px;
+  z-index: 9999;
+  transition: left 0.3s ease;
+  background-color: red;
+  width: 100%;
+}
+.menu-button-container.open {
+  left: 5px; /* Ancho del menú lateral + espacio de margen */
+}
+
+.mat-sidenav mat-button {
+  width: 100%; /* Ancho del botón para que ocupe todo el espacio disponible */
+  text-align: left; /* Alinear el texto del botón a la izquierda */
+  padding: 12px; /* Espaciado interno del botón */
+  color: #ffffff; /* Color del texto del botón */
+}
+
+.mat-sidenav mat-button:hover {
+  background-color: #333333; /* Cambiar el color de fondo en hover */
+}

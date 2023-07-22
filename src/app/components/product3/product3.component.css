@@ -1,0 +1,13 @@
+p{
+    font-size: 15px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 2px;
+}
+img{
+    display: block;
+    margin: auto;
+    max-width: 60px; /* Reducir el ancho de la imagen a 50px */
+    max-height: 60px; /* Reducir la altura de la imagen a 50px */
+    border-radius: 60%; /* Hacer un borde redondo del 50% del tamaño */
+}

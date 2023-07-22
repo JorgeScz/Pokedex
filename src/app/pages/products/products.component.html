@@ -1,0 +1,133 @@
+<!--
+<div class="welcome-container">
+  <h2  (mouseenter)="changeCursor('pointer')" (mouseleave)="changeCursor('auto')" (click)="getFilteredPoke4()" >Pokedex</h2>
+  <div class="planta" >
+    <a (mouseenter)="changeCursor('pointer')" (mouseleave)="changeCursor('auto')" (click)="getFilteredPoke()" > Tipo
+      planta </a>
+    <a></a>
+    <a (mouseenter)="changeCursor('pointer')" (mouseleave)="changeCursor('auto')" (click)="tipofuego()" class="fuego"> Tipo
+      fuego </a>
+
+    <a></a>
+    <a (mouseenter)="changeCursor('pointer')" (mouseleave)="changeCursor('auto')" (click)="getFilteredPoke3()"class="fuego"> Tipo agua
+    </a>
+    <a (click)="usuario()">usuarios</a>
+  </div>
+  <div class="btn" (click)="toggleSubMenu()">
+    <img mat-card-image src="https://img.freepik.com/iconos-gratis/usuario_318-552176.jpg" alt="Usuario"
+      class="user-avatar" (mouseenter)="changeCursor('pointer')" (mouseleave)="changeCursor('auto')" class="ed">
+    <br>
+  </div>
+  <div class="dropdown-content" *ngIf="showSubMenu">
+    <a (click)="logout()" class="a" (mouseenter)="changeCursor('pointer')" (mouseleave)="changeCursor('auto')">cerrar
+      seccion</a>
+  </div>
+</div>-->
+<br>
+
+<mat-toolbar class="navbar">
+  <span class="cen">
+    <img src="https://i.pinimg.com/originals/a2/3e/a7/a23ea791dc63544f4a52eaf42d602ee2.png" (click)="toggleDrawer()"  alt="" height="40" width="40">
+  </span>
+
+  <span>
+    <img (mouseenter)="changeCursor('pointer')" (mouseleave)="changeCursor('auto')" (click)="getFilteredPoke4()"
+      src="https://user-images.githubusercontent.com/29473781/180619084-a56960ab-7efa-4e34-9d33-4e3e581d62ff.png" alt=""
+      height="50" width="150">
+
+  </span>
+  <div>
+    <span>
+      <img (click)="toggleSubMenu()" mat-card-image src="https://img.freepik.com/iconos-gratis/usuario_318-552176.jpg"
+        alt="Usuario" class="user-avatar" (mouseenter)="changeCursor('pointer')" (mouseleave)="changeCursor('auto')"
+        class="ed" />
+    </span>
+
+    <div class="dropdown-content" *ngIf="showSubMenu">
+      <a (click)="logout()" class="a" (mouseenter)="changeCursor('pointer')" (mouseleave)="changeCursor('auto')">Log
+        Out</a>
+    </div>
+  </div>
+</mat-toolbar>
+
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" [opened]="isDrawerOpened" class="vertical-drawer">
+      <div >
+        
+        <button class="izq">
+          <span >
+            <a (mouseenter)="changeCursor('pointer')" (mouseleave)="changeCursor('auto')" (click)="getFilteredPoke4()" class="planta">
+              Home
+            </a>
+          </span>
+        </button>
+        <button class="izq" mat-menu-item>
+          <span >
+            <a (mouseenter)="changeCursor('pointer')" (mouseleave)="changeCursor('auto')" (click)="getFilteredPoke()" class="planta">
+              Grass
+            </a>
+          </span>
+        </button>
+        <button class="izq" mat-menu-item>
+          <span>
+            <a (mouseenter)="changeCursor('pointer')" (mouseleave)="changeCursor('auto')" (click)="tipofuego()" class="fuego">
+              Fire
+            </a>
+          </span>
+        </button>
+        <button class="izq" mat-menu-item>
+          <span>
+            <a (mouseenter)="changeCursor('pointer')" (mouseleave)="changeCursor('auto')" (click)="getFilteredPoke3()"
+          class="agua">
+          Water
+        </a>
+          </span>
+        </button>
+        <button class="izq" mat-menu-item>
+          <span>
+            <a (mouseenter)="changeCursor('pointer')" (mouseleave)="changeCursor('auto')" (click)="usuario()" class="user">
+              Users
+        </a>
+          </span>
+        </button>
+      </div>
+  </mat-drawer>
+  <mat-drawer-content class="contenido">
+    <div class="pokemon-container">
+      <!-- Mostrar las tarjetas de Pokémon de la página actual usando *ngFor -->
+      <ng-container *ngFor="let Poke of getCurrentPageItems()">
+        <div class="pokemon-card" (click)="openPokemonModal(Poke)">
+          <app-product [poke]="Poke"></app-product>
+        </div>
+      </ng-container>
+    </div>
+    <!-- Botones de paginación -->
+    <div class="pagination">
+      <br />
+      <button class="antes" (click)="goToPreviousPage()" [disabled]="currentPage === 1">Previous</button>
+      <button class="antes" (click)="goToNextPage()" [disabled]="currentPage === getTotalPages()">Next</button>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
+
+
+
+
+<!--
+<div class="pokemon-container">
+
+  Mostrar las tarjetas de Pokémon de la página actual usando *ngFor 
+  <ng-container *ngFor="let Poke of getCurrentPageItems()">
+    <div class="pokemon-card" (click)="openPokemonModal(Poke)">
+      <app-product [poke]="Poke"></app-product>
+    </div>
+  </ng-container>
+</div>
+
+ Botones de paginación 
+<div class="pagination">
+  <br>
+  <button class="antes" (click)="goToPreviousPage()" [disabled]="currentPage === 1">Anterior</button>
+  <button (click)="goToNextPage()" [disabled]="currentPage === getTotalPages()">Siguiente</button>
+</div>
+-->

@@ -1,0 +1,6 @@
+<ng-container *ngIf="usuari">
+    <img [ngSrc]="usuari.img" width="100" height="100">
+    <p>{{usuari.name}}</p>
+    
+</ng-container>
+<ng-container  *ngIf="!usuari"></ng-container> 

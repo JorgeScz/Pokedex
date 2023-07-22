@@ -1,0 +1,7 @@
+<ng-container *ngIf="poke">
+    <h2>{{poke.name}}</h2>
+    <img [ngSrc]="poke.img" width="100" height="100">
+    <p>Number: {{poke.id}} </p>
+    <p>Type: {{poke.type}}</p>
+</ng-container>
+<ng-container  *ngIf="!poke"></ng-container> 

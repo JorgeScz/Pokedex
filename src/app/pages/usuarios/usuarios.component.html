@@ -1,0 +1,74 @@
+<div class="menu-button-container"  [class.open]="isSidenavOpen">
+  <button mat-icon-button (click)="toggleSidenav()">
+    <mat-icon>{{ isSidenavOpen ? 'close' : 'menu' }}</mat-icon>
+  </button>
+</div>
+
+<!-- Definición del menú vertical -->
+<mat-sidenav #sidenav mode="side" [opened]="isSidenavOpen" [style.height]="getHeight()">
+    <!-- Contenido del menú vertical -->
+  <br> <br> <br>
+  <div id="menu">
+    <app-product3 [usuari]="users2" *ngFor="let users2 of users2"></app-product3>
+
+    <ul>
+        <li><a href="products">Inicio</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Contacto</a></li>
+    </ul>
+    </div>
+  <!-- Agrega más opciones si es necesario -->
+</mat-sidenav>
+
+
+    <!-- Contenido principal de la página -->
+    <div class="table-container">
+      <br> <br> <br>
+      <table class="custom-table">
+        <!-- Table header -->
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Photography</th>
+            <th>Email</th>
+            <th>Phone number</th>
+          </tr>
+        </thead>
+        <!-- Table body with pagination -->
+        <tbody>
+          <ng-container *ngFor="let usuario of usersToShow">
+            <tr>
+              <td>{{ usuario.id }}</td>
+              <td>{{ usuario.name }}</td>
+              <td>
+                <img [src]="usuario.img" width="100" height="100">
+              </td>
+              <td>{{ usuario.email }}</td>
+              <td>{{ usuario.phone_number }}</td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Pagination controls -->
+  <div class="pagination">
+    <button mat-icon-button (click)="prevPage()" [disabled]="currentPage === 1">
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+    <ng-container *ngFor="let page of visiblePages">
+      <button mat-icon-button [class.active]="currentPage === page" (click)="goToPage(page)">
+        {{ page }}
+      </button>
+    </ng-container>
+    <button mat-icon-button (click)="nextPage()" [disabled]="currentPage === totalPages">
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+  </div>
+    
+    
+    
+  

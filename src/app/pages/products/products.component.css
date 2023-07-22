@@ -1,0 +1,210 @@
+/* welcome.component.css */
+
+.welcome-container {
+    background-color: #ff0000; /* Fondo rojo */
+    height: 45px;
+    margin-top: -5px;
+    
+  }
+  
+  .pokemon-container {
+    display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 0 10px; /* Margen de 10px a ambos lados */
+  max-width: 1000px; /* Ancho máximo del contenido */
+  margin-left: auto; /* Centrar el contenido horizontalmente */
+  margin-right: auto; /* Centrar el contenido horizontalmente */
+  }
+  h3, p {
+    margin: 0; /* Elimina el margen predeterminado para evitar espacios innecesarios */
+   
+  }
+  .planta{
+    margin-left: 12%;
+    margin-top: -35px;
+    font-size: 18px;
+    color: #d6c168;
+  }
+  .pokemon-card {
+    /* Estilos adicionales para las tarjetas de Pokémon (opcional) */
+    background-color: white;
+    border: 10px solid #444a59 ;
+    border-radius: 5px;
+    padding: 10px;
+
+  }
+  
+  .btn{
+    margin-top: -31px;
+    
+  }
+  .ed{
+    height: 30px;
+  }
+  .cen{
+    color: black;
+    background-color: #3c040c;
+  }
+  .a{
+    font-size: 20px;
+    color: aliceblue;
+    margin-left: 70%;
+    background-color: #ff550082;
+  }
+  .btn{
+    margin-left: 95%;
+  }
+  .fuego{
+    margin-left: 15px;
+    color: #d6c168;
+  }
+  .agua{
+    margin-left: 15px;
+    color: #d6c168;
+  }
+
+  .user{
+    margin-left: 15px;
+    color: #d6c168;
+  }
+  .me{
+    
+    position: absolute; /* Posiciona el menú de forma absoluta */
+    top: 60px; /* Ajusta la distancia desde la parte superior */
+    right: -16px; /* Ajusta la distancia desde la derecha con un valor negativo */
+    z-index: 1; /* Asegura que el menú aparezca encima de otros elementos */
+    
+  }
+  .pagination{
+    
+    margin-top: 2%;
+  }
+  .antes{
+    margin-right: -20%;
+    background-color:  #25e19f;
+  }
+  .eje{
+    background-color: #ff0000;
+    color: aliceblue;
+    font-size: 18px;
+    cursor: pointer
+  }
+  .navbar {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    background-color:  #3c040c  ;
+  }
+  
+  .navbar-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .navbar-options {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-options button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    margin-left: 16px;
+  }
+  button {
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    margin-left: 35%;
+    transition: all 0.2s ease; /* Agregamos una transición para animar los cambios de tamaño */
+  }
+  
+  button:hover {
+    transform: scale(1.1); /* Al pasar el mouse, aumentamos el tamaño en 10% */
+    background-color: #0056b3; /* Cambiamos el color de fondo al pasar el mouse */
+  }
+  
+  button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  .spacer {
+    flex: 1;
+  }
+  
+  .user-button {
+    cursor: pointer;
+    margin-left: 4px; /* Ajusta el margen izquierdo para posicionar el botón con la imagen de usuario */
+  }
+  
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 30%;
+    color: rgba(239, 241, 235, 0.926); /* Color del texto de la imagen */
+    font-size: 18px;
+  }
+  
+  
+  
+  .mat-menu-item {
+    color: rgb(255, 11, 11); /* Color de texto blanco */
+    font-size: 14px;
+    
+  }
+  .izquierda{
+   margin-left: 150%;
+   width: auto;
+   background-color: aqua;
+  }
+
+  
+  .example-fill-remaining-space {
+    flex: 1 1 auto;
+  }
+  .example-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .vertical-drawer {
+    width: 150px;
+    background-color:  #c20625 ;
+  }
+  
+  .mat-drawer-content {
+    flex: 1;
+    padding: 16px;
+    width: 0px;
+    background-color: black;
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Opcional: para alinear los botones a la izquierda */
+    padding: 16px; /* Opcional: agregar un poco de espacio entre los botones */
+  }
+  
+  .contenido{
+
+    background-color:  #db0c2c;
+  }
+  .izq{
+    background-color: #6b0211 ;
+    color: rgb(214, 210, 210);
+    margin-left: 0px;
+    width: 150px;
+    text-align: left;
+  }
